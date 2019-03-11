@@ -36,7 +36,7 @@ Of course you need to run the backend to have it work:
 ## To run backend:
 
 ``` bash
-cd server
+cd src/server
 node server.js
 ```
 
