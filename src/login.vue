@@ -59,12 +59,16 @@ export default {
 
     onSubmit (evt) {
       evt.preventDefault();
+      console.log(this.form)
       //alert(JSON.stringify(this.form));
-      this.$http.post('http://127.0.0.1:3000/login', this.form, {withCredentials: true}).then((res)=>{
+      this.$http.post('http://127.0.0.1:3000/auth/login', this.form, {withCredentials: true}).then((res)=>{
         console.log(res)
-        if(res.data==-1){
-          alert(JSON.stringify(this.form));
+        if(res.data.status=='success'){
+          //alert(JSON.stringify(this.form));
+          this.$router.push('/home')
         }
+      }).catch((err)=>{
+        alert(err)
       })
     },
     onReset (evt) {
