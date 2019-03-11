@@ -39,7 +39,9 @@ node server.js
 
 ## what you should see:
 - You can logging page at: *localhost:8080*
-- You can then try logging in
+- You can then try logging in using this credential: 
+__email__: 123@123.com
+__password__: 123
 - When logging in, it will navigate you to: *localhost:8080/#/home*
 - You can click logout, which will navigate you back to logging page
 - If you aren't logged in and try to directly go to *localhost:8080/#/home*, you will be navigated back to logging page.
